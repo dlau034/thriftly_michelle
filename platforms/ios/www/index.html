@@ -76,6 +76,7 @@
             //
             function capturePhoto() {
                 // Take picture using device camera and retrieve image as base64-encoded string
+                console.log("capture button clicked")
                 navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, saveToPhotoAlbum: true,
                                             destinationType: destinationType.DATA_URL });
             }
@@ -141,55 +142,101 @@
                 <li class="sort filters" data-sort="price">Price: Lowest - Highest</li>
                 <li class="sort filters" data-sort="brand">Brand Names</li>
                 <li class="divider">Show Only</li>
+                <li class="filters btn" id="filter-accessories">Accessories</li>                
+                <li class="btn blank" id="">Coats & Jackets</li>
                 <li class="filters btn" id="filter-dress">Dresses</li>
+                <li class="btn blank" id="">Jeans</li>
+                <li class="btn blank" id="">Maternity</li>
+                <li class="btn blank" id="">Pants</li>
+                <li class="btn blank" id="">Sportswear</li>
+                <li class="btn blank" id="">Shorts</li>                
                 <li class="filters btn" id="filter-skirt">Skirt</li>
-                <li class="filters btn" id="filter-shoes">Shoes</li>
-                <li class="filters btn" id="filter-accessories">Accessories</li>
+                <li class="filters btn" id="filter-shoes">Shoes</li>                
+                <li class="btn blank" id="">Suits & Blazers</li>
+                <li class="btn blank" id="">Sweaters</li>
+                <li class="btn blank" id="">Sweats & Hoodies</li>
+                <li class="btn blank" id="">T-shirts</li>
+                <li class="btn blank" id="">Tops & Blouses</li>
+                <li class="btn blank" id="">Other</li>                
             </ul>
         </nav>
 
-          <div title='THRIFTLY' id="main" data-tab="navbar_home" class="panel feed_panel" data-nav="main_nav" >
+        <div id="login" class="panel" data-header="none" data-footer="none" style="overflow:hidden">    
+            <img src="img/bg2.jpg">
+            
+            <a id="twitter" href="#main">Login with Twitter</a>
+            <a id="fb" href="#main">Login with Facebook</a>
+            <a id="vendor" href="#form1">Vender Login</a>
+        </div>        
+
+        <div title="Uploading: Step One" id="form1" class="panel form1" data-footer="none" style="overflow:hidden" data-header="form1_head" >    
+            <div class="form_field">                
+                <p>Tell us a bit more about the item</p>
+                <input class="form_orange" placeholder="Name of listing"id="someInput" type="text" placeholder="Name">                        
+                <div class="image_box">
+                    <img id="smallImage" src="" />    
+                </div>
+                
+                <span onclick="capturePhoto();" class="btn-orange cam_btn"><img src="img/camera.png" alt=""></span>
+                <span onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="btn-orange store_btn" href=""><img src="img/storage.png" alt=""></span>            
+
+            </div>            
+        </div>
+
+        <div title="Uploading: Step Two" id="form2" class="panel form1" data-footer="none" style="overflow:hidden" data-header="form2_head">   
+            <div class="form_field">
+                <p>Tell us a bit more about the item</p>
+                
+                
+                <div class="bid_tag tag">
+                    <div class="text">BID $</div>
+                    <input id="bidInput" class="price_input" type="text">   
+                </div>
+                
+                <div class="buy_tag tag">
+                    <div class="text">BUY $</div>
+                    <input id="buyInput" class="price_input" type="text">   
+                </div>
+                
+                
+                <textarea rows="5" id="descriptionInput" placeholder="Add a description of the item - 140 characters" class="form_orange"></textarea>                
+            </div>
+
+        </div> 
+    
+        <div title="Uploading: Step Three" id="form3" class="panel form1" data-footer="none" style="overflow:hidden" data-header="form3_head">   
+            <!-- <h1>form3</h1> -->
+
+            <div class="form_field">
+                <p>Tell us a bit more about the item</p>
+                <select id="category" class="dropdown">
+                  <option value="Other">Pick a Category</option>                  
+                  <option>Coats & Jackets</option>
+                  <option>Dresses</option>
+                  <option>Jeans</option>
+                  <option>Maternity</option>
+                  <option>Pants</option>
+                  <option>Sportswear</option>
+                  <option>Shorts</option>
+                  <option>Skirts</option>
+                  <option>Suits & Blazers</option>
+                  <option>Sweaters</option>
+                  <option>Sweats & Hoodies</option>
+                  <option>T-Shirts</option>
+                  <option>Tops & Blouses</option>
+                  <option>Other</option>
+                </select>
+                <input id="brand" class="orange_input" type="text" placeholder="What Brand is it?">
+                <input id="size" class="orange_input" type="text" placeholder="What Size is it?">
+                <!-- <input type="button" value="Submit" onClick="addName()">         -->
+            </div>            
+        </div>                 
+
+        <div title='THRIFTLY' id="main" data-tab="navbar_home" class="panel feed_panel" data-nav="main_nav" data-header="feed_head" >
 
             <div>
                 <input id="feed_search" class="search" type="search" placeholder="Looking for Something?" />
                 <div class="list" id="container">
-                
-
-        <!-- Item Group  -->
-
-<!--                     <div class="slide_main">
-                       <div class="slide_row">
-                            <a class="photo_box" href="#photo">
-                                <img src="img/5.jpg" alt="">
-                            </a>                            
-                            <div class="boxing">
-                                <h3 class="name">5. Beautiful Pleated Dress Sheath, Size 12, White</h3>
-                                <span class="category">dress</span>
-                                
-                                <p>Store: Finderz Keeperz<p>    
-                                <p>Location: Upper East Side, Manhattan</p>                             
-                                <p class="cost">$20</p> 
-                                <span class="time"><b>3hrs Left</b></span>
-                                <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
-                                <div class="pull_bar"></div>
-                                <div class="pull_bar"></div>                   
-                            </div>                            
-                        </div>
-                       <div class="slide_row">                            
-                            <div class="boxing_right">
-                                <div class="pull_bar_right"></div>
-                                <div class="pull_bar_right"></div>                                  
-                                <p>DESCRIPTION: <br>
-                                    Linen Dress, BUST 34", 86,3CM, WAIST 29", 73,7 CM, HIPS 64", 162,5 CM ,LENGTH 41", 104,1 CM, VERY GOOD EXCELLENT CONDITION
-                                </p>
-                                <a href="#buy" class="btn button_buy">BUY $50</a>
-                                <a href="#bid" class="btn button_buy">BID $39</a>
-                            </div>
-                       </div>
-                    </div>   -->
-
-        <!-- Item Group - using Ajax -->
-                        <!-- <div id="container"> -->
                             
                             <script id="template" type="text/x-handlebars-template">
                                 {{#each this}}
@@ -239,47 +286,28 @@
 
             <div id="buy" data-tab="navbar_home" class="panel" overflow="fixed" >
                 <div class="modal_box">
-                    <img src="img/1.jpg" alt="">
+                    <img src="1.jpg" alt="">
                     <div class="wrapper">
                         <h2>Victoria's Secret Blue Size Medium
                         <b>Buy Now:</b> $30</h2> 
                     </div>
                     <div class="wrapper2">                        
-                        <p><b>Brand:</b>Victoria's Secret Blue Size</p>
-                        <p><b>Size:</b> Medium</p>
-                        <p><b>Store:</b> Beacon’s Closet</p>
-                        <p><b>Catagory:</b> dress</p>
-                        <p><b>Description:</b> Worn, but in great condition, soft fabric with a relaxed, comfortable silhouette, No wear or tear. Great summer dress for a nice day out </p>
+                        <p><b>Brand:</b>&nbspVictoria's Secret Blue Size</p>
+                        <p><b>Size:</b>&nbspMedium</p>
+                        <p><b>Store:</b>&nbspBeacon’s Closet</p>
+                        <p><b>Catagory:</b>&nbspdress</p>
+                        <p><b>Description:</b>&nbspWorn, but in great condition, soft fabric with a relaxed, comfortable silhouette, No wear or tear. Great summer dress for a nice day out </p>
                     </div>
-                    
+                    <a class="button block btn-payment" href="#">Buy Now with Paypal</a>
+                    <a class="button block btn-payment" href="#">Buy Now with Debit</a>
+                    <a class="button block btn-payment" href="#">Buy Now with Credit</a>
                 </div>              
                     
-                <ul class="list inset">
-                    <li><a href="#"><h3>Buy Now with Paypal</h3></a></li>
-                    <li><a href="#"><h3>Buy Now with Debit</h3></a></li>
-                    <li><a href="#"><h3>Buy Now with Credit</h3></a></li>
-                </ul>
             </div>
 
             <div id="bid" data-tab="navbar_home" class="panel" overflow="fixed" >
-                <button onclick="capturePhoto();">Capture Photo</button> <br>
-                <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-                <img style="display:none;width:200px;height:200px;-webkit-transform:rotate(90deg);" id="smallImage" src="" />
-                <br>
-                
-                <input id="someInput" type="text" placeholder="Name">
-                <input id="brand" type="text" placeholder="Brand">
-                <input id="size" type="text" placeholder="Size">
-                <input id="category" type="text" placeholder="Category">
-                <input id="buyInput" type="text" placeholder="$Buy">
-                <input id="bidInput" type="text" placeholder="$Bid">
-         
-                <input type="button" value="Submit" onClick="addName()">
-                
+                <h3>This is the bid screen</h3>
             </div>
-
-
-
 
     </div> <!-- content ends -->
 
@@ -300,64 +328,37 @@
         <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton'></a>
     </div>    
 
-    <!-- <header id="Feed"> -->
-        <!-- <a id="backButton" onclick="$.ui.goBack()" class='button'>Go Back</a> -->
-            <!-- <h1>Custom Header</h1> -->
+    <header id="form1_head">
+        <!-- <a id="backButton" onclick="$.ui.goBack()" class='button'></a> -->
+        <a id="prevButton" href="#login" class='button'></a>
+        <a id="nextButton" href="#form2" class='button'></a>        
+        <h1>Uploading: Step 1</h1>
+    </header>
 
-    <!-- </header> -->
+    <header id="form2_head">
+        <a id="prevButton" href="#form1" class='button'></a>
+        <a id="nextButton" href="#form3" class='button'></a>        
+        <h1>Uploading: Step 2</h1>
+    </header>    
+
+    <header id="form3_head">
+        <a id="prevButton" href="#form2" class='button'></a>
+        <a id="nextButton" href="#main" onClick="return addName();" class='button'></a>        
+        <h1>Uploading: Step 3</h1>
+    </header>  
+
+    <header id="feed_head">
+        <!-- <a id="prevButton" href="#form2" class='button'></a> -->
+        <!-- <a id="nextButton" href="#main" onClick="return addName();" class='button'></a>         -->
+        <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton headleft'></a>
+        <h1><a id="return_login" href="#login">THRIFTLY</a></h1>
+    </header>  
 
     </div> <!-- afui ends -->
 
     <script src="js/handlebars.js"></script>
 
-    <script>
-        var data = [];
-
-        var template = Handlebars.compile( $('#template').html() );            
-
-        $.getJSON("data.json", function(d) {
-            data = d.items
-
-            $("#container").append( template(data) );
-        });
-
-
-        function addName() {
-            console.log("HEREEEE");
-
-            
-            var nameElement = document.getElementById("someInput");
-            var theName = nameElement.value;
-            
-            var brandElement = document.getElementById("brand");
-            var theBrand = brandElement.value;
-            
-            
-            var sizeElement = document.getElementById("size");
-            var theSize = sizeElement.value;
-            
-            
-            var categoryElement = document.getElementById("category");
-            var theCategory = categoryElement.value;
-            
-            var buyElement = document.getElementById("buyInput");
-            var theBuy = buyElement.value;
-            
-            var bidElement = document.getElementById("bidInput");
-            var theBid = bidElement.value;
-            
-            var theImage = smallImage.src;
-            
-
-            
-            data.unshift({name: theName, brand: theBrand, size: theSize, tag: theCategory, buy_price: theBuy, auction_start: theBid, image: theImage});
-
-            $("#container").html( template(data) );
-            filter();
-            slider();
-            
-        };        
-    </script>
+    <script src="js/data.js"></script>
 
     <script src="js/list.js"></script>
 

@@ -1191,17 +1191,17 @@ body {
 #afui .button {
 	position:relative;
 	display:inline-block;
-	padding:8px 12px;
+	padding:12px 12px;
 	margin:8px 0;
-	font-weight:bold;
-	color:#000;
+	/*font-weight:normal;*/
+	/*color:red;*/
 	text-align:center;
 	text-shadow:0 1px 0 #fff;
 	vertical-align:top;
 	cursor:pointer;
 	background-color:#eee;
-	border:1px solid #666;
-	border-radius:6px;
+	/*border:1px solid #666;*/
+	/*border-radius:6px;*/
 	/*box-shadow: 0 1px 0 #fff;*/
 
 	text-decoration: none;
@@ -1209,7 +1209,7 @@ body {
 }
 
 /* Active */
-#afui .button.pressed { background:#fff; }
+/*#afui .button.pressed { background:#fff; }*/
 
 #afui .button.previous {
 

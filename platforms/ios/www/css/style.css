@@ -36,6 +36,73 @@ h3 {
 	font-family: "futura";
 }
 
+/* Globel Form Overrides */
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+.headleft {
+	float: left!important
+}
+
+.orange_input {
+	background-color: #F68944!important;
+	color: white!important;
+	border: none!important;
+	border-radius: 0px!important;
+	font-family: futura!important;
+	font-size: 15px!important;
+}
+.price_input {
+	background-color: #F68944!important;
+	color: white!important;
+	border: none!important;
+	border-radius: 0px!important;
+	font-family: futura!important;
+	font-size: 19px!important;
+	width: 75px!important;
+	display: inline-block;
+	height: 50px!important;
+	margin: 0!important;
+	float: right;
+}
+.tag:nth-of-type(1) {
+	float: right;	
+}
+.btn-orange {
+	background-color: #F68944!important;
+	/*border: 1px inset rgba(0,0,0,0.1);*/
+}
+.btn-orange img:active {
+	background-color: #DD7B3D;
+}
+.tag {
+	display: inline-block;
+	background-color: #F68944!important;
+	margin-bottom: 0.5em;
+	color: white;
+	font-family: futura!important;
+	font-size: 21px!important;
+	width: 144px;
+}
+.tag .text {
+	float: left;
+	text-indent: 8px;
+	margin-top: 11px;
+}
+
 /* Hard Override on af.ui.css - Changes that is ok being applied globally */
 
 #afui #header .button {
@@ -71,7 +138,8 @@ h3 {
 
 #afui #navbar a {
 	top: 0px!important;
-	height: 50px;
+	height: 52px;
+	font-size: 10px;
 }
 #afui > #menu.tabletMenu {
 	background-color: #e1e1e1;
@@ -102,6 +170,9 @@ h3 {
 	border-top: 1px solid #ccc!important;
 }
 
+#afui > #header {
+	/*position: fixed!important;*/
+}
 /* Slider on Feed Panel */
 
 .slide_main {
@@ -124,7 +195,7 @@ h3 {
 }
 
 .slide_row a.photo_box {
-	border: 10px solid #FDA275!important;
+	border: 6px solid #FDA275!important;
 	height: 100%;
 }
 	
@@ -153,7 +224,7 @@ h3 {
 	display: block;
 	right: 8px;
 	top: 15px;
-	border-left: 2px solid #ccc;
+	border-left: 2px solid #bbb;
 }
 .slide_row .pull_bar:last-child {
 	right: 4px;
@@ -191,12 +262,16 @@ h3 {
 	display: block;
 	width: 106px;
 	text-align: center;
-	padding: 7px 0px;
+	padding: 8px 0px;
 	color: white;
-	font-size: 1.3em;
+	font-size: 1.1em;
 	margin-bottom: 7px;
 	margin-top: 1px;
 	text-decoration: none;
+	clear: right;
+}
+.boxing_right .btn:active {
+	background-color: #DD7B3D!important;
 }
 .boxing_right .pull_bar_right {
 	width: 3px;
@@ -206,7 +281,7 @@ h3 {
 	display: block;
 	top: 12px;
 	left: 0;
-	border-left: 2px solid #ccc;
+	border-left: 2px solid #bbb;
 }
 .boxing_right .pull_bar_right:first-child {
 	left: 4px;
@@ -218,18 +293,18 @@ h3 {
 	width: 100%;
 }
 #login a {
-	position: absolute;
-	
-	width: 280px;
+	position: absolute;	
+	width: 250px;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	left: 50%;
-	margin-left: -8em;
+	margin-left: -8.2em;
 	text-decoration: none;
-	font-size: 1.2em;
-	font-family: Futura-CondensedExtraBold;
+	font-size: 1.1em;
+	font-family: "futura";
 	color: white;
+	border-radius: 3px;
 }
 #login {
 	height: 100%!important;
@@ -237,17 +312,29 @@ h3 {
 	position: relative;
 }
 #twitter {
-	bottom: 7em!important;
+	bottom: 4em!important;
 	background-color: #24ACEC;
+	border: 1px solid #209BD4;
+}
+#twitter:active {
+	background-color: #209BD4;
 }
 #fb {
-	bottom: 10em;
+	bottom: 7.5em;
 	background-color: #47609A;
+	border: 1px solid #40568A;
+}
+#fb:active {
+	background-color: #40568A;	
 }
 #vendor {
-	bottom: 4em;
-	background-color: #666;
+	bottom: 1em!important;
+	font-family: futura!important
 }
+#vendor:active {
+	color: #ccc;
+}
+
 
 /* PHOTO PANEL */
 
@@ -288,6 +375,15 @@ h3 {
 .wrapper2 {
 	clear: both;
 }
+.btn-payment {
+	border-radius: 3px!important;	
+	/*font-weight: normal!important;*/
+	color: white;
+	background-color: #f68944!important;
+}
+.btn-payment:active {
+	background-color: #DD7B3D!important;	
+}
 
 /* FEED PAGE FILTER PANELS */
 
@@ -313,5 +409,214 @@ h3 {
 #afui #menu .list .divider {
 	color: white;
 }
+#return_login {
+	color: white;
+	text-decoration: none;	
+}
 
 
+/* FORM 1 UPLOAD PANEL */
+.form_field p {
+	text-align: center;
+	color: white!important;	
+	font-family: futura;
+	font-size: 1em!important;
+	margin-bottom: 1em;
+}
+
+.form1 {
+	background-color: #F7CFAB!important;
+}
+.form_field {
+	margin: 1em;
+}
+.form_orange {
+	color: white!important;
+	background-color: #F68944!important;
+	border-radius:0!important;
+	font-family: futura!important;
+
+	float: right;
+	border: none!important;
+	margin-bottom: 1.2em!important;
+}
+
+
+#feed_search::-webkit-input-placeholder {
+  color: #555;
+  font-family: futura;
+}
+#feed_search:-moz-placeholder {
+  color: #555;
+  font-family: futura;
+}
+#feed_search:-ms-input-placeholder { /* IE10+ */
+  color: #555;
+  font-family: futura;
+}
+
+.image_box {
+	width: 220px;
+	height: 220px;
+	background-color: white;
+	float: left;
+	margin-bottom: 1em;
+	border: 10px solid #FDA275;
+	overflow: hidden;
+	background-color: #FDA275; 
+}
+.image_box img {
+	width: 100%;
+	/*height: 100%;*/
+}
+.cam_btn {	
+	width: 55px;
+	display: block;
+	height: 55px;
+	float: right;
+	margin-bottom: 1em;
+}
+.cam_btn img {
+	width: 55px;
+}
+.store_btn {	
+	width: 55px;
+	display: block;
+	height: 55px;
+	float: right;
+	clear: right;	
+}
+.store_btn img {
+	width: 55px;
+}
+.blank {
+	color: #999;
+	border-color: #ccc!important;
+	font-weight: normal;	
+}
+
+.description {
+	width: 192px!important;
+}
+
+/*Custom forward button*/
+
+#afui #nextButton {
+	background: rgba(249,249,249,1);
+	color: #fff;
+	display: block;
+	position: absolute;
+	line-height: 44px;
+	/*left: 25px;*/
+	right: -3px;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	padding: none;
+	text-shadow: none;
+	background-color: transparent;
+	border: none;
+	border-color: none;
+	height: 44px;
+	top: 0;
+	border-radius: none;
+	box-shadow: none;
+	margin: 0;
+	padding-left: 0;
+	text-align: center;
+	width: 50px;
+	padding: 0 !important;
+	margin: 0 !important;
+	float: right;     
+}
+
+#afui #nextButton::before {
+	z-index: -1;
+	font-size: 22px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	text-align: center;
+	border-radius: none;
+	border: none;
+	border-color: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	transform: none;
+	font-family: 'chevron';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	content: "\f054";
+	/*-webkit-transform: rotate(180deg);*/
+	/*transform: rotate(180deg);*/
+	background-color: transparent;
+}
+
+#afui #prevButton {
+	background: rgba(249,249,249,1);
+	color: #fff;
+	display: block;
+	position: absolute;
+	line-height: 44px;
+	left: 30px;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	padding: none;
+	text-shadow: none;
+	background-color: transparent;
+	border: none;
+	border-color: none;
+	height: 44px;
+	top: 0;
+	border-radius: none;
+	box-shadow: none;
+	margin: 0;
+	padding-left: 0;
+	text-align: center;
+	width: 50px;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#afui #prevButton::before {
+	z-index: -1;
+	font-size: 22px;
+	position: absolute;
+	top: 10px;
+	left: -20px;
+	text-align: center;
+	border-radius: none;
+	border: none;
+	border-color: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	transform: none;
+	font-family: 'chevron';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	content: "\f054";
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	background-color: transparent;
+}
+
+
+/* FORM 2 UPLOAD PANEL */
+
+.dropdown {
+	background-color: #F68944!important;
+	color: white!important;
+	border: none!important;
+	border-radius: 0px!important;
+	font-family: futura!important
+
+}

@@ -15,7 +15,6 @@ function camerapull() {
                         });
 };
 
-
 function getPhoto(source) {
     // Retrieve image file location from specified source
     navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
@@ -23,18 +22,12 @@ function getPhoto(source) {
                                 sourceType: source });
 }
 
-
-
-
 function doStuff()
 {
     var nameElement = document.getElementById("someInput");
     var theName = nameElement.value;
     document.getElementById("someDiv").innerHTML += theName;
 }
-
-
-
 
 // Index and applies the filters to the data
 
@@ -104,9 +97,6 @@ function filter(){
     });       
     console.log("filter")              
 };
-
-
-
 
 // Appframework Carousal 
 
