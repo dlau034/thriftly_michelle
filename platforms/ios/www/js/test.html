@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Testing</title>
+</head>
+<body id="hacker-list">
+
+<div >
+    <ul class="list">
+       <li>
+	       	<div class="div">
+	           <h3 class="name">Jonny</h3>
+	           <p class="city">Stockholm</p>
+	        </div>
+       </li>
+       
+    </ul>
+</div>
+
+<script src="list.js"></script>
+
+<script>
+
+	function testing(text){
+
+		var options = {
+		    valueNames: ['name', 'city']
+		};
+
+		var hackerList = new List('hacker-list', options);
+			
+		console.log("testing")	
+
+		hackerList.add( { name: text } );
+
+	};
+
+</script>
+
+
+</body>
+</html>
+

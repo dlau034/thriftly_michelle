@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>THRIFTLY</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <!-- css  -->
+
+    <link rel="stylesheet" type="text/css" href="css/icons.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/af.ui.css" title="default" />
+
+    <!-- custom css  -->    
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="default" />  
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            
+            var pictureSource;   // picture source
+            var destinationType; // sets the format of returned value
+            
+            // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready",onDeviceReady,false);
+            
+            // device APIs are available
+            //
+            function onDeviceReady() {
+                pictureSource=navigator.camera.PictureSourceType;
+                destinationType=navigator.camera.DestinationType;
+            }
+            
+            // Called when a photo is successfully retrieved (CAMERA)
+            //
+            function onPhotoDataSuccess(imageData) {
+                // Uncomment to view the base64-encoded image data
+                // console.log("IMAGE DATA: " + imageData);
+                
+                // Get image handle
+                //
+                var smallImage = document.getElementById('smallImage');
+                
+                // Unhide image elements
+                //
+                smallImage.style.display = 'block';
+                
+                // Show the captured photo
+                // The inline CSS rules are used to resize the image
+                //
+                smallImage.src = "data:image/jpeg;base64," + imageData;
+            }
+            
+            // Called when a photo is successfully retrieved
+            //
+            function onPhotoURISuccess(imageURI) {
+                // Uncomment to view the image file URI
+                 console.log("IMAGEURI: " + imageURI);
+                
+                // Get image handle
+                //
+                var smallImage = document.getElementById('smallImage');
+                
+                // Unhide image elements
+                //
+                smallImage.style.display = 'block';
+                
+                // Show the captured photo
+                // The inline CSS rules are used to resize the image
+                //
+                smallImage.src = imageURI;
+            }
+            
+            // A button will call this function
+            //
+            function capturePhoto() {
+                // Take picture using device camera and retrieve image as base64-encoded string
+                navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, saveToPhotoAlbum: true,
+                                            destinationType: destinationType.DATA_URL });
+            }
+            
+            // A button will call this function
+            //
+            function capturePhotoEdit() {
+                // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+                navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+                                            destinationType: destinationType.DATA_URL });
+            }
+            
+            // A button will call this function
+            //
+            function getPhoto(source) {
+                navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 30,
+                                            destinationType: destinationType.FILE_URI,
+                                            sourceType: source,
+                                            });
+            }
+            
+            // Called if something bad happens.
+            //
+            function onFail(message) {
+                alert('Failed because: ' + message);
+            }
+            
+            </script>
+
+    <!-- Appframework JS  -->    
+    <!-- If using jquery, need to uncomment this, comment out appframework.js - appframework uses zepto.js -->    
+<!--
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>    
+    <script type="text/javascript" charset="utf-8" src="js/jq.appframework.js"></script>    
+-->
+  
+    <script type="text/javascript" charset="utf-8" src="js/appframework.js"></script>  
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.js"></script>     
+
+    <!-- Appframework Plugin JS -->
+
+    <script>
+
+    </script>    
+    <script src="js/jq.desktopBrowsers.js"></script>
+        
+    <!-- include touch on desktop browsers only, uncomment script above if you only want desktopBrowsers.js to load when on desktop-->
+
+</head>
+
+<body id="list_feed">
+    <div id="afui">
+
+        <div id="content"> <!-- Content Opening tag -->
+
+        <!-- Side Navigations -->
+
+        <nav id="main_nav"> <!-- Globel Nav -->
+            <!-- <h3 class='title'>Filters</h3> -->
+            <ul class="list">
+                <li class="divider">Sort By</li>
+                <li class="filters btn" id="filter-none">Show all</li>
+                <li class="sort filters" data-sort="price">Price: Lowest - Highest</li>
+                <li class="sort filters" data-sort="brand">Brand Names</li>
+                <li class="divider">Show Only</li>
+                <li class="filters btn" id="filter-dress">Dresses</li>
+                <li class="filters btn" id="filter-skirt">Skirt</li>
+                <li class="filters btn" id="filter-shoes">Shoes</li>
+                <li class="filters btn" id="filter-accessories">Accessories</li>
+            </ul>
+        </nav>
+
+          <div title='THRIFTLY' id="main" data-tab="navbar_home" class="panel feed_panel" data-nav="main_nav" >
+
+            <div>
+                <input id="feed_search" class="search" type="search" placeholder="Looking for Something?" />
+                <div class="list" id="container">
+                
+
+        <!-- Item Group  -->
+
+<!--                     <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                                <img src="img/5.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+                                <h3 class="name">5. Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <span class="category">dress</span>
+                                
+                                <p>Store: Finderz Keeperz<p>    
+                                <p>Location: Upper East Side, Manhattan</p>                             
+                                <p class="cost">$20</p> 
+                                <span class="time"><b>3hrs Left</b></span>
+                                <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
+                                <div class="pull_bar"></div>
+                                <div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                            <div class="boxing_right">
+                                <div class="pull_bar_right"></div>
+                                <div class="pull_bar_right"></div>                                  
+                                <p>DESCRIPTION: <br>
+                                    Linen Dress, BUST 34", 86,3CM, WAIST 29", 73,7 CM, HIPS 64", 162,5 CM ,LENGTH 41", 104,1 CM, VERY GOOD EXCELLENT CONDITION
+                                </p>
+                                <a href="#buy" class="btn button_buy">BUY $50</a>
+                                <a href="#bid" class="btn button_buy">BID $39</a>
+                            </div>
+                       </div>
+                    </div>   -->
+
+        <!-- Item Group - using Ajax -->
+                        <!-- <div id="container"> -->
+                            
+                            <script id="template" type="text/x-handlebars-template">
+                                {{#each this}}
+                                <div class="slide_main">
+                                   <div class="slide_row">
+                                        <a class="photo_box" href="#photo">
+                                            <img src="{{image}}" alt="">
+                                        </a>                            
+                                        <div class="boxing">
+                                            <h3 class="name">{{name}}</h3>                               
+                                            <p class="size">Size: {{size}}</p>
+                                            <p class="brand">Brand: {{brand}}</p>
+                                            <p>Category: <span class="category">{{tag}}</span></p>
+                                            <p>Store: {{store}}<p>    
+                                            <span class="time"><b>{{time_left}}</b> Remain</span>
+
+                                            
+                                            <span class="pricing">Buy&nbsp<b>$<span class="price">{{buy_price}}</span></b>&nbspBid&nbsp<b>${{auction_start}}</b></span><span>
+
+                                            <div class="pull_bar"></div>
+                                            <div class="pull_bar"></div>                                                 
+                                        </div>                            
+                                    </div>
+                                    <div class="slide_row">                            
+                                        <div class="boxing_right">
+                                            <div class="pull_bar_right"></div>
+                                            <div class="pull_bar_right"></div>                                        
+                                            <p>DESCRIPTION: <br>{{description}}</p>
+                                            <a href="#buy" class="btn button_buy">BUY ${{buy_price}}</a>
+                                            <a href="#bid" class="btn button_buy">BID ${{auction_start}}</a>                                            
+                                        </div>
+                                    </div>            
+                                </div>
+                                {{/each}}
+                            </script>
+                        <!-- </div>  -->
+                
+        <!-- Item Group  -->
+
+                </div> <!-- list ends -->
+            </div> <!-- panel ends -->
+
+        </div> <!-- list feed (required for list.js) ends -->
+            
+            <div id="photo" data-tab="navbar_home" class="panel">    <img src="img/1.jpg" alt="">
+            </div>
+
+            <div id="buy" data-tab="navbar_home" class="panel" overflow="fixed" >
+                <div class="modal_box">
+                    <img src="img/1.jpg" alt="">
+                    <div class="wrapper">
+                        <h2>Victoria's Secret Blue Size Medium
+                        <b>Buy Now:</b> $30</h2> 
+                    </div>
+                    <div class="wrapper2">                        
+                        <p><b>Brand:</b>Victoria's Secret Blue Size</p>
+                        <p><b>Size:</b> Medium</p>
+                        <p><b>Store:</b> Beacon’s Closet</p>
+                        <p><b>Catagory:</b> dress</p>
+                        <p><b>Description:</b> Worn, but in great condition, soft fabric with a relaxed, comfortable silhouette, No wear or tear. Great summer dress for a nice day out </p>
+                    </div>
+                    
+                </div>              
+                    
+                <ul class="list inset">
+                    <li><a href="#"><h3>Buy Now with Paypal</h3></a></li>
+                    <li><a href="#"><h3>Buy Now with Debit</h3></a></li>
+                    <li><a href="#"><h3>Buy Now with Credit</h3></a></li>
+                </ul>
+            </div>
+
+            <div id="bid" data-tab="navbar_home" class="panel" overflow="fixed" >
+                <button onclick="capturePhoto();">Capture Photo</button> <br>
+                <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+                <img style="display:none;width:200px;height:200px;-webkit-transform:rotate(90deg);" id="smallImage" src="" />
+                <br>
+                
+                <input id="someInput" type="text" placeholder="Name">
+                <input id="brand" type="text" placeholder="Brand">
+                <input id="size" type="text" placeholder="Size">
+                <input id="category" type="text" placeholder="Category">
+                <input id="buyInput" type="text" placeholder="$Buy">
+                <input id="bidInput" type="text" placeholder="$Bid">
+         
+                <input type="button" value="Submit" onClick="addName()">
+                
+            </div>
+
+
+
+
+    </div> <!-- content ends -->
+
+    <!-- Footer Nav -->
+    <!-- ############################################################### -->
+
+    <div id="navbar">            
+        <a href="#" data-transition="none" id='navbar_home' class='icon home' >Home</a>
+        <a href="#photo" data-transition="none" id='navbar_profile' class='icon user'>MY PROFILE</a>
+        <a data-transition="none" id='addphoto' class='icon heart' >MY SAVES</a>
+
+    </div>              
+
+    <!-- Header Nav -->
+    <!-- ############################################################### -->
+
+    <div id="header">
+        <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton'></a>
+    </div>    
+
+    <!-- <header id="Feed"> -->
+        <!-- <a id="backButton" onclick="$.ui.goBack()" class='button'>Go Back</a> -->
+            <!-- <h1>Custom Header</h1> -->
+
+    <!-- </header> -->
+
+    </div> <!-- afui ends -->
+
+    <script src="js/handlebars.js"></script>
+
+    <script>
+        var data = [];
+
+        var template = Handlebars.compile( $('#template').html() );            
+
+        $.getJSON("data.json", function(d) {
+            data = d.items
+
+            $("#container").append( template(data) );
+        });
+
+
+        function addName() {
+            console.log("HEREEEE");
+
+            
+            var nameElement = document.getElementById("someInput");
+            var theName = nameElement.value;
+            
+            var brandElement = document.getElementById("brand");
+            var theBrand = brandElement.value;
+            
+            
+            var sizeElement = document.getElementById("size");
+            var theSize = sizeElement.value;
+            
+            
+            var categoryElement = document.getElementById("category");
+            var theCategory = categoryElement.value;
+            
+            var buyElement = document.getElementById("buyInput");
+            var theBuy = buyElement.value;
+            
+            var bidElement = document.getElementById("bidInput");
+            var theBid = bidElement.value;
+            
+            var theImage = smallImage.src;
+            
+
+            
+            data.unshift({name: theName, brand: theBrand, size: theSize, tag: theCategory, buy_price: theBuy, auction_start: theBid, image: theImage});
+
+            $("#container").html( template(data) );
+            filter();
+            slider();
+            
+        };        
+    </script>
+
+    <script src="js/list.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="js/af.carousel.js"></script>          
+
+    <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+    
+
+</body>
+</html>
