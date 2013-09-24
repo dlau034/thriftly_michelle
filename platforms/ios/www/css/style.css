@@ -25,9 +25,9 @@ p {
 	background: #f68944;
 	border: none;
 	padding: 0;
-	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
-	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
 h3 {
@@ -54,7 +54,10 @@ h3 {
    color: white;  
 }
 .headleft {
-	float: left!important
+	float: left!important;
+}
+.headleft:active:after {
+	border-color: rgba(255,255,255,0.6)!important;
 }
 
 .orange_input {
@@ -103,13 +106,21 @@ h3 {
 	margin-top: 11px;
 }
 
+/* Global Buttons */
+
+#nextButton {
+	/*color: red;*/
+}
+#prevButton {
+
+}
+
 /* Hard Override on af.ui.css - Changes that is ok being applied globally */
 
 #afui #header .button {
-
 	border-radius: 0;
 	height: 100%;
-	text-indent: 12px;
+	text-indent: 4px;
 }
 
 #afui #header .button:active {
@@ -133,7 +144,8 @@ h3 {
 }
 #afui #navbar a.pressed {
 	border-bottom: 6px solid white;
-	background: rgba(255,255,255,0.2);
+	/*background: rgba(255,255,255,0.2);*/
+	background: #DD7B3D;
 }
 
 #afui #navbar a {
@@ -374,6 +386,7 @@ h3 {
 }
 .wrapper2 {
 	clear: both;
+	margin-bottom: 2em;
 }
 .btn-payment {
 	border-radius: 3px!important;	
@@ -501,14 +514,18 @@ h3 {
 
 /*Custom forward button*/
 
+#afui #nextButton:active {
+	color: rgba(255,255,255,0.7)
+}
+
 #afui #nextButton {
 	background: rgba(249,249,249,1);
 	color: #fff;
 	display: block;
 	position: absolute;
-	line-height: 44px;
+	line-height: 45px;
 	/*left: 25px;*/
-	right: -3px;
+	right: -5px;
 	text-overflow: ellipsis;
 	font-size: 14px;
 	padding: none;
@@ -527,14 +544,15 @@ h3 {
 	padding: 0 !important;
 	margin: 0 !important;
 	float: right;     
+
 }
 
 #afui #nextButton::before {
 	z-index: -1;
 	font-size: 22px;
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: 0px;
+	left: 0px;
 	text-align: center;
 	border-radius: none;
 	border: none;
@@ -548,12 +566,15 @@ h3 {
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: 1;
+	/*line-height: 1;*/
 	-webkit-font-smoothing: antialiased;
 	content: "\f054";
 	/*-webkit-transform: rotate(180deg);*/
 	/*transform: rotate(180deg);*/
-	background-color: transparent;
+	/*background-color: transparent;*/
+	/*background-color: red;*/
+	height: 45px;
+	width: 45px;	
 }
 
 #afui #prevButton {
@@ -561,8 +582,8 @@ h3 {
 	color: #fff;
 	display: block;
 	position: absolute;
-	line-height: 44px;
-	left: 30px;
+	line-height: 48px;
+	left: 0px;
 	text-overflow: ellipsis;
 	font-size: 14px;
 	padding: none;
@@ -581,13 +602,16 @@ h3 {
 	padding: 0 !important;
 	margin: 0 !important;
 }
+#afui #prevButton:active {
+	color: rgba(255,255,255,0.7)
+}
 
 #afui #prevButton::before {
 	z-index: -1;
 	font-size: 22px;
 	position: absolute;
-	top: 10px;
-	left: -20px;
+	top: 0px;
+	left: 0px;
 	text-align: center;
 	border-radius: none;
 	border: none;
@@ -601,12 +625,14 @@ h3 {
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: 1;
+	/*line-height: 1;*/
 	-webkit-font-smoothing: antialiased;
 	content: "\f054";
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
-	background-color: transparent;
+	/*background-color: red;*/
+	height: 45px;
+	width: 45px;
 }
 
 
