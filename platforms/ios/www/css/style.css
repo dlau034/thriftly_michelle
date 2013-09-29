@@ -793,7 +793,7 @@ h3 {
 }
 .sub_nav {
 	position: absolute;
-	top: 45px;
+	top: 44px;
 	width: 101%;
 	overflow: visible;
 }
@@ -836,4 +836,71 @@ h3 {
 .bookmark_list {
 	margin: 2.4em 0 0 0!important;
 
+}
+
+/* Custom List Styles */
+/* Glamour */
+
+#filter-glamour {	
+	background: url('../img/glamour2.jpg'); 
+	height:53px;	
+}
+#filter-glamour div {
+	background-color: rgba(239,0,111,0.5);
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+#filter-glamour span {
+	color: white;
+	z-index: 2;
+	position: absolute;
+}
+
+/* Vintage */
+
+#filter-vintage {	
+	background: url('../img/vintage.jpg'); 
+	height:53px;	
+}
+#filter-vintage div {
+	background-color: rgba(233,202,122,0.7);
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+#filter-vintage span {
+	color: white;
+	z-index: 2;
+	position: absolute;
+}
+
+/* Fall */
+
+#filter-fall {	
+	background: url('../img/fall.jpg'); 
+	height:53px;	
+}
+#filter-fall div {
+	background-color: rgba(0,169,157,0.7);
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+#filter-fall span {
+	color: white;
+	z-index: 2;
+	position: absolute;
 }
