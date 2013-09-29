@@ -6,6 +6,8 @@ $(".filters").click(function(){
     $.ui.toggleSideMenu(false);
 });
 
+
+
 var pictureSource;  
 
 function camerapull() {

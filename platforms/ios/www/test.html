@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title></title>
+			<link rel="stylesheet" href="">
+			
+			<script src="js/typeahead.js"></script>
+			<script>
+$(function() {
+	$('.input').typeahead({                                
+	  name: 'countries',                                                          
+	  prefetch: '/js/countries.json',                                         
+	  limit: 10                                                                   
+	});	
+});
+
+	
+// $(function() {
+// 	$('.input').typeahead({
+// 	  name: 'accounts',
+// 	  local: ['timtrueman', 'JakeHarding', 'vskarich']
+// 	});	
+// });
+
+			</script>
+	</head>
+	<body>
+		<input class="input" type="text">
+	</body>
+</html>

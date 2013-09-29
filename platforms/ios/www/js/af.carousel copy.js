@@ -200,7 +200,7 @@
                     oldStateOkToMove= this.okToMove;
                     this.okToMove = this.glue ? Math.abs(totalMoved) > this.glue  && Math.abs(totalMoved) < (100 - this.glue) : true;
                     if (this.okToMove && !oldStateOkToMove) {
-                        $.trigger(this,"movestart",[this.el]);
+                    	$.trigger(this,"movestart",[this.el]);
                     }
                 }
 
