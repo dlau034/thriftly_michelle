@@ -652,9 +652,13 @@
 
     <header id="mystuff_head">
         <h1>My Stuff</h1>
+        
+        
+        <!--<a id="backButton" onclick="$.ui.slideLeft()" class='button'></a>-->
+
 
         <div class="sub_nav">
-            <a href="#saves" class="sub_btn">My Saves</a>
+            <a href="#saves" data-transition="slide" data-direction="reverse" class="sub_btn">My Saves</a>
             <a href="#profile" class="sub_btn">My Profile</a>
             <a href="#settings" class="sub_btn">Settings</a>
         </div>
@@ -669,7 +673,7 @@
     </header>  
 
     </div> <!-- afui ends -->
-
+    
     <script src="js/handlebars.js"></script>
 
     <script src="js/data.js"></script>
