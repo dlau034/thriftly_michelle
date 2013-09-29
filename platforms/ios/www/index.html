@@ -630,20 +630,22 @@
     </div>    
 
     <header id="form1_head">
-        <!-- <a id="backButton" onclick="$.ui.goBack()" class='button'></a> -->
-        <a id="prevButton" href="#login" class='button'></a>
+        <a id="backButton" onclick="$.ui.slideLeft()" class='button'></a>
+        <!--<a id="prevButton" href="#login" class='button'></a>-->
         <a id="nextButton" href="#form2" class='button'></a>        
         <h1>Uploading: Step 1</h1>
     </header>
 
     <header id="form2_head">
-        <a id="prevButton" href="#form1" class='button'></a>
-        <a id="nextButton" href="#form3" class='button'></a>        
+        <a id="backButton" onclick="$.ui.slideLeft()" class='button'></a>
+       <!-- <a id="prevButton" href="#form1" class='button'></a>-->
+        <a id="nextButton" href="#form3" class='button'></a>
         <h1>Uploading: Step 2</h1>
     </header>    
 
     <header id="form3_head">
-        <a id="prevButton" href="#form2" class='button'></a>
+        <a id="backButton" onclick="$.ui.slideLeft()" class='button'></a>
+        <!--<a id="prevButton" href="#form2" class='button'></a>-->
         <a id="nextButton" href="#main" onClick="return addName();" class='button'></a>        
         <h1>Uploading: Step 3</h1>
     </header>  
