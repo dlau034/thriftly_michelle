@@ -34,7 +34,10 @@ function addName() {
     
     var theImage = smallImage.src;
     
-    data.unshift({ name: theName, brand: theBrand, size: theSize, tag: theCategory, buy_price: theBuy, auction_start: theBid, image: theImage, description: theDescription, time_left:"24h", store: "Housing Works" });
+    var descriptionElement = document.getElementById("endingsoonest");
+    var theMinutes = descriptionElement.value;
+    
+    data.unshift({ name: theName, brand: theBrand, size: theSize, tag: theCategory, buy_price: theBuy, auction_start: theBid, image: theImage, description: theDescription, time_left:"24h", store: "Housing Works", minutes:theMinutes });
 
     $("#container").html( template(data) );
     filter();

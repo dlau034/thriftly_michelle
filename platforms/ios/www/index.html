@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- css  -->
 
     <link rel="stylesheet" type="text/css" href="css/icons.css" /> 
@@ -139,13 +139,10 @@
             <ul class="list">
                 <li class="divider">Sort By</li>
                 <li class="filters btn" id="filter-none">Show all</li>
-<<<<<<< HEAD
                 <li class="sort filters" data-sort="price">Price: Lowest - Highest</li>
-                <li class="sort filters" data-sort="price">Time: Ending Soonest</li>
-=======
+                <li class="sort filters" data-sort="endingsoonest">Time: Ending Soonest</li>
                 <li class="sort filters" data-sort="price">Price Ranking</li>
-                <li class="sort filters" data-sort="brand">Closing Time</li>                
->>>>>>> 89cc8c3b3a0263291eed89a82b3463ca26f0c819
+                <li class="sort filters" data-sort="brand">Closing Time</li>
                 <li class="sort filters" data-sort="brand">Brand Names</li>
                 
                 <li class="divider">Show Only</li>                
@@ -330,11 +327,13 @@
                                             <img src="{{image}}" alt="">
                                         </a>                            
                                         <div class="boxing">
-                                            <h3 class="name">{{name}}</h3>                               
+                                            <h3 class="name">{{name}}</h3>
                                             <p class="size">Size: {{size}}</p>
                                             <p class="brand">Brand: {{brand}}</p>
                                             <p>Category: <span class="category">{{tag}}</span></p>
-                                            <p>Store: {{store}}<p>    
+                                            <p>Store: {{store}}<p>
+                                           <span class="endingsoonest"><b>{{minutes}}</b></span>
+
                                             <span class="time"><b>{{time_left}}</b> Remain</span>
 
                                             

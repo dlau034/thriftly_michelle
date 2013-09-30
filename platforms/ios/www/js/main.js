@@ -40,7 +40,7 @@ function doStuff()
 
 function filter(){
     var options = {
-        valueNames: [ 'name', 'price', 'category', 'brand' ]
+        valueNames: [ 'name', 'price', 'category', 'brand', 'endingsoonest' ]
     };
 
     var featureList = new List('list_feed', options);
