@@ -7,6 +7,11 @@ $(".filters").click(function(){
 });
 
 
+function promote() {
+    setTimeout(function(){
+        $("#promoted").show();
+    },1000);
+};
 
 var pictureSource;  
 
@@ -91,6 +96,89 @@ function filter(){
         });
         return false;
     });        
+
+    // Custom Filters
+
+    $('#filter-glamour').click(function() {
+        console.log("glamour");
+        // $.ui.toggleSideMenu(false)
+        featureList.filter(function(item) {
+            if (item.values().category == "glamour") {                
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });            
+
+    $('#filter-vintage').click(function() {
+        console.log("vintage");
+        // $.ui.toggleSideMenu(false)
+        featureList.filter(function(item) {
+            if (item.values().category == "vintage") {                
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });                
+
+    $('#filter-fall').click(function() {
+        console.log("fall");
+        // $.ui.toggleSideMenu(false)
+        featureList.filter(function(item) {
+            if (item.values().category == "fall") {                
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });                    
+
+    $('#filter-jen').click(function() {
+        console.log("jen");
+        // $.ui.toggleSideMenu(false)
+        featureList.filter(function(item) {
+            if (item.values().category == "jen") {                
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });
+
+    $('#filter-tees').click(function() {
+        console.log("tees");
+        // $.ui.toggleSideMenu(false)
+        featureList.filter(function(item) {
+            if (item.values().category == "tees") {                
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });                        
+
+    $('#filter-designer').click(function() {
+        console.log("designer");
+        // $.ui.toggleSideMenu(false)
+        featureList.filter(function(item) {
+            if (item.values().category == "designer") {                
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });                            
+
+
+    // Filter All and None
 
     $('#filter-none').click(function() {
         featureList.filter();

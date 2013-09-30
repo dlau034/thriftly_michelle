@@ -1165,12 +1165,15 @@ body {
   display: block;
   width: 28px;
   height: 28px;
-  background: #ccc;
+  /*background: #ccc;*/
+  background: #f68944;
   border-radius: 50px;
+  
   z-index: 5;
   top: -2px;
   left: 0px;
   position: absolute;
+  border: 1px solid #C66B3E;
   transition: transform 100ms linear;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);

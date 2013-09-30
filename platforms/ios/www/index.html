@@ -139,11 +139,11 @@
             <ul class="list">
                 <li class="divider">Sort By</li>
                 <li class="filters btn" id="filter-none">Show all</li>
-                <li class="sort filters" data-sort="price">Price: Lowest - Highest</li>
+                <li class="sort filters" data-sort="price">Price Ranking</li>
+                <li class="sort filters" data-sort="brand">Closing Time</li>                
                 <li class="sort filters" data-sort="brand">Brand Names</li>
-                <li class="divider">Show Only</li>
-
                 
+                <li class="divider">Show Only</li>                
                 <li class="filters btn custom_banner" id="filter-glamour">
                     <div></div>
                     <span>Glamour Picks</span>
@@ -156,12 +156,20 @@
                     <div></div>
                     <span>Fall Collection</span>                    
                 </li>
-                <li class="filters btn" id="filter-dress">Classic Tees</li>                
-                <li class="filters btn" id="filter-stylist1">Stylist: Jennifer Aniston</li>
-                <li class="filters btn" id="filter-designer">Designer</li>
-                
+                <li class="filters btn custom_banner" id="filter-jen">
+                    <div></div>
+                    <span>Stylist: Jennifer Aniston</span>                    
+                </li>
+                <li class="filters btn custom_banner" id="filter-tees">
+                    <div></div>
+                    <span>Classic Tees</span>                    
+                </li>
+                <li class="filters btn custom_banner" id="filter-designer">
+                    <div></div>
+                    <span>Designer</span>                    
+                </li>                
 
-
+                <li class="divider"></li>
                 <li class="filters btn" id="filter-accessories">Accessories</li>                
                 <li class="btn blank" id="">Coats &amp; Jackets</li>
 
@@ -210,12 +218,12 @@
                 <p>Tell us a bit more about the item</p>
                 
                 
-                <div class="bid_tag tag">
+                <div class="bid_tag tag_btn">
                     <div class="text">BID $</div>
                     <input id="bidInput" class="price_input" type="text">   
                 </div>
                 
-                <div class="buy_tag tag">
+                <div class="buy_tag tag_btn">
                     <div class="text">BUY $</div>
                     <input id="buyInput" class="price_input" type="text">   
                 </div>
@@ -266,17 +274,54 @@
     <!-- Panel - @thrift_feed @main -->
     <!-- ############################################################### -->
 
-        <div title='THRIFTLY' id="main" data-tab="navbar_home" class="panel feed_panel" data-nav="main_nav" data-header="feed_head" >
+        <div title='THRIFTLY' id="main" data-tab="navbar_home" class="panel feed_panel" data-nav="main_nav" data-header="feed_head" data-load="promote" >
 
             <div>
                 <input id="feed_search" class="search" type="search" placeholder="Looking for Something?" />
                 <div class="list" id="container">
+
+                    <!-- Set Time Out Hack -->
+
+                               <div class="slide_main" id="promoted">
+                                   <div class="slide_row">
+                                        <a class="photo_box" href="#buy">
+                                            <img src="1.jpg" alt="">
+                                        </a>                            
+                                        <div class="boxing">
+                                            <h3 class="name">Very Nice Dress Promoted</h3>
+                                            <p class="promoted_tag"> <span class="icon tag">Promoted</span></p>                               
+                                            <p class="size">Size: 12</p>
+                                            
+                                            <p class="brand">Brand: brand</p>
+                                            <p>Category: <span class="category">category</span></p>
+                                            <p>Store: Cool store<p>    
+                                            <span class="time"><b>12h</b> Remain</span>
+
+                                            
+                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">12</span></b>&nbspBid&nbsp;<b>$13</b></span><span>
+
+                                            <div class="pull_bar"></div>
+                                            <div class="pull_bar"></div>                                                 
+                                        </div>                            
+                                    </div>
+                                    <div class="slide_row">                            
+                                        <div class="boxing_right">
+                                            <div class="pull_bar_right"></div>
+                                            <div class="pull_bar_right"></div>                                        
+                                            <p>DESCRIPTION: <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ratione.</p>
+                                            <a href="#buy" class="btn button_buy">BUY/BID</a>
+                                            <a href="#bid" class="btn button_buy">SAVE</a>                                            
+                                        </div>
+                                    </div>            
+                                </div>      
+
+                    <!-- Set Time Out Hack -->
                             
                             <script id="template" type="text/x-handlebars-template">
                                 {{#each this}}
                                 <div class="slide_main">
                                    <div class="slide_row">
-                                        <a class="photo_box" href="#photo">
+                                        <a class="photo_box" href="#buy">
                                             <img src="{{image}}" alt="">
                                         </a>                            
                                         <div class="boxing">
@@ -323,51 +368,74 @@
 
             <div title="Shop Around" id="shop_list" data-tab="navbar_shop" class="panel shoplist">    
                 <div>
+        
+                        <div class="shop_unit">
+                            <a href="#shop_detail"></a>
+                            <div class="img_wrap">
+                                <img src="img/thrift1.jpg" alt="">    
+                            </div>                        
+                            <h3>Housing Works</h3>
+                            <p>143 W 17th St</p>
+                            <p>Chelsea, Manhattan</p>
+                            <p>0.4 Mi</p>
+                            <p class="desc">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,elit. Ipsa, illo.</p>
+                        </div>
                     
-                    <a href="#shop_detail" class="shop_unit">
-                        <div class="img_wrap">
-                            <img src="img/shop1.jpg" alt="">    
-                        </div>                        
-                        <h3>Housing Works</h3>
-                        <p>40w 38th Street</p>
-                        <p>Manhattan</p>
-                        <p>0.4 Mil away</p>
-                        <p class="desc">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,elit. Ipsa, illo.</p>
-                    </a>
                     
 
-                    <a href="#shop_detail" class="shop_unit">
+                    <div class="shop_unit">
+                        <a href="#shop_detail"></a>
                         <div class="img_wrap">
-                            <img src="img/shop1.jpg" alt="">    
+                            <img src="img/thrift2.jpg" alt="">    
                         </div>                        
-                        <h3>Thrift Queens</h3>
-                        <p>40w 38th Street</p>
-                        <p>Manhattan</p>
-                        <p>0.6 Mil away</p>
+                        <h3>Vintage Thrift Shop</h3>
+                        <p>286 3rd Ave</p>
+                        <p>Gramercy, Manhattan</p>
+                        <p>0.6 Mi</p>
                         <p class="desc">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,  Ipsa, illo.</p>
-                    </a>
+                        </a>
+                    </div>
 
-                    <a href="#shop_detail" class="shop_unit">
+
+                <div class="shop_unit">
+                    <a href="#shop_detail"></a>
+                    
                         <div class="img_wrap">
-                            <img src="img/shop1.jpg" alt="">    
+                            <img src="img/thrift3.jpg" alt="">    
                         </div>                        
-                        <h3>Housing Works</h3>
-                        <p>40w 38th Street</p>                        
-                        <p>Manhattan</p>
-                        <p>1.2 Mil away</p>
+                        <h3>Cure Thrift Shop</h3>
+                        <p>111 E 12th St</p>                        
+                        <p>East Village, Manhattan</p>
+                        <p>1.2 Mi</p>
+                        <p class="desc">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. consectetur adipisicing elit. Ipsa, illo.</p>
+                    </a>                
+                </div>    
+                  
+                <div class="shop_unit">
+                    <a href="#shop_detail"></a> 
+                        <div class="img_wrap">
+                            <img src="img/thrift4.jpg" alt="">    
+                        </div>                        
+                        <h3>Salvation Army</h3>
+                        <p>536 W 46th St</p>
+                        <p>Hell's Kitchen, Manhattan</p>
+                        <p>2.8 Mi</p>
+                        <p class="desc">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. consectetur adipisicing elit. Ipsa, illo.</p>
+                    </a>
+                </div>
+
+                <div class="shop_unit">
+                    <a href="#shop_detail"></a>                 
+                        <div class="img_wrap">
+                            <img src="img/thrift5.jpg" alt="">    
+                        </div>                        
+                        <h3>Monk Thrift Shop</h3>
+                        <p>175 MacDougal St</p>
+                        <p>Greenwich Village, Manhattan</p>
+                        <p>1.8 Mi</p>
                         <p class="desc">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. consectetur adipisicing elit. Ipsa, illo.</p>
                     </a>                    
-                  
-                    <a href="#shop_detail" class="shop_unit">
-                        <div class="img_wrap">
-                            <img src="img/shop1.jpg" alt="">    
-                        </div>                        
-                        <h3>Thrift Queens</h3>
-                        <p>40w 38th Street</p>
-                        <p>Manhattan</p>
-                        <p>2.8 Mil away</p>
-                        <p class="desc">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. consectetur adipisicing elit. Ipsa, illo.</p>
-                    </a>
+                </div>
 
                 </div>                      
             </div>
@@ -380,10 +448,17 @@
                     <img src="img/shop1.jpg" alt="">    
                 </div>    
                 <div class="shop_top">                    
-                    <h2>Housing Works</h2>
-                    <p><b>40 West 38th Street</b></p>
+                    <h2>Housing Works - Chelsea</h2>
+                    <p><b>143 W 17th Street</b></p>
+                    
+                    <p><b>Chelsea</b></p>
                     <p><b>Manhattan</b></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, quos quod facere alias! Et, veniam, animi, deleniti, illo in repellat vitae laboriosam dolorum molestiae mollitia autem ea nihil nostrum. Molestias!</p>
+                    <p><b>10018</b></p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, quos quod facere alias! Et, veniam, animi, deleniti, illo in repellat vitae laboriosam dolorum molestiae mollitia autem ea nihil nostrum. Molestias!<br><br>
+
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, quos quod facere alias! Et, veniam, animi, deleniti, illo in repellat vitae laboriosam dolorum molestiae mollitia autem ea nihil nostrum. Molestias!</p><br>
 
                     <a class="button block btn-payment" href="#shop_listing">Store Listings</a>
                     <a class="button block btn-payment" href="#">Direction - Map</a>
@@ -474,7 +549,7 @@
     <!-- Panel - @MyStuff @save-->
     <!-- ############################################################### -->            
 
-        <div title="My Stuff" id="saves" data-tab="navbar_profile" data-header="mystuff_head" class="panel my_stuff" >            
+        <div title="MY STUFF" id="saves" data-tab="navbar_profile" data-header="mystuff_head" class="panel my_stuff" >            
                 <div class="list bookmark_list  " id="container">
                                 
                                 <div class="slide_main">
@@ -563,9 +638,9 @@
                 <span class="label pushdown">Phone</span>
                 <input class="orange_input" type="text" value="415-323-8832">
                 <span class="label">Email</span>
-                <input class="orange_input" type="text" value="david@david.com">
+                <input class="orange_input" type="text" value="david@davidlaucreative.com">
                 <span class="label">About Me</span>
-                <textarea rows="4" class="orange_input" type="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, asperiores?</textarea>
+                <textarea rows="4" class="orange_input" type="text">From Brooklyn, & love thrift shopping. </textarea>
                 <span class="label">Gender</span>
                 <select class="orange_input">
                     <option value="">Male</option>
@@ -586,14 +661,31 @@
         <div title="My Stuff - Settings" id="settings" data-tab="navbar_profile" data-header="mystuff_head"  class="panel my_stuff" >
             <div class="stuff_content">
                 <h2>Notifications</h2>
-                <a class="button block btn-payment" href="#">Always</a>
-                <a class="button block btn-payment" href="#">Sometimes</a>
-                <a class="button block btn-payment" href="#">Once a Week</a>
-                <a class="button block btn-payment" href="#">Only Favorited Brands</a>
-                <a class="button block btn-payment" href="#">Never</a>
+                <select name="" class="dropdown">
+                    <option value="">Always</option>                    
+                    <option value="">Sometimes</option>                    
+                    <option value="">Once in a while</option>                    
+                    <option value="">Only Favorited Brands</option>                    
+                    <option value="">Never</option>                    
+                </select>
+
+                <div class="reminder">
+                    <label class="label_hack">Reminder for Closing items</label>
+                    <input id="toggle1" type="checkbox" name="toggle1" value="1" class="toggle toggle_right">
+                    <label for="toggle1" data-on="On" data-off="Off" class="toggle_right pressed"><span></span></label>                    
+                </div>
+                
                 <h2>Privacy</h2>
-                <a class="button block btn-payment" href="#">Privacy</a>
-                <h2>Social Media</h2>
+
+                <select name="" class="dropdown">
+                    <option value="">Show my Profile Publicly</option>                    
+                    <option value="">Hide my Profile</option>                    
+                </select>
+
+
+
+                <!-- <a class="button block btn-payment" href="#">Privacy</a> -->
+                <h2>Social Media Settings</h2>
                 <a class="button block btn-payment" href="#">Facebook Login</a>
                 <a class="button block btn-payment" href="#">Twitter Login</a>
             </div>
@@ -604,13 +696,13 @@
 
             <div title="Blue Dress Med" id="buy" data-tab="navbar_home" class="panel buy_page" >
                 <div class="buy_img">
-                    <img src="1.jpg">    
+                    <a href="#photo"><img src="1.jpg"></a>
                 </div>
                 <div class="wrapper">
                     <h5>Blue Dress Medium Size</h5>
                 </div>    
-                <a class="pay_buttons" href="">Buy: $30</a>
-                <a class="pay_buttons" href="">Bid: $20</a>
+                <a class="pay_buttons" href="#">Buy: $30</a>
+                <a class="pay_buttons" href="#">Bid: $20</a>
                 
                 <div class="modal_box">
                     
@@ -624,20 +716,27 @@
                         <p><b>Description:</b>&nbsp;Worn, but in great condition, soft fabric with a relaxed, comfortable silhouette, No wear or tear. Great summer dress for a nice day out </p>
                          
                     </div>
-                    <a class="button block btn-payment" href="#">Bookmark Item</a>
+                    <a class="button block btn-payment" href="#">Save this Item</a>
                     <a class="button block btn-payment" href="#">Share Item</a>
-                    <a class="button block btn-payment" href="#shop_listing">More Items from Store</a>
+                    <a class="button block btn-payment" href="#shop_listing">More Items from this Store</a>
                 </div>              
                     
             </div>
 
     </div> <!-- content ends -->
 
+    <!-- Panel - @photo -->
+    <!-- ############################################################### -->       
+
+    <div title="Blue Dress" id="photo" class="panel ">
+        <img class="photo_page" src="1.jpg" alt="">
+    </div>
+
     <!-- @Footer @Nav -->
     <!-- ############################################################### -->
 
     <div id="navbar">            
-        <a href="#main" data-transition="none" id='navbar_home' class='icon home' >THRIFT FEED</a>
+        <a href="#main" data-transition="none" id='navbar_home' class='icon feed_icon' >THRIFT FEED</a>
         <a href="#saves" data-transition="none" id='navbar_profile' class='icon user'>MY STUFF</a>
         <a href="#shop_list" data-transition="none" id='navbar_shop' class='icon heart' >SHOP AROUND</a>
 
@@ -646,9 +745,13 @@
     <!-- @Header Nav -->
     <!-- ############################################################### -->
 
-    <div id="header">
+    <!-- <div id="header">
         <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton'></a>
-    </div>    
+    </div>     -->
+
+
+
+    <!-- Header - @Upload-->
 
     <header id="form1_head">
         <a id="backButton" onclick="$.ui.slideLeft()" class='button'></a>
@@ -671,13 +774,15 @@
         <h1>Uploading: Step 3</h1>
     </header>  
 
+    <!-- Header - @MyStuff @settings-->
+
     <header id="mystuff_head">
         <h1>My Stuff</h1>
 
         <div class="sub_nav">
-            <a href="#saves" class="sub_btn">My Saves</a>
-            <a href="#profile" class="sub_btn">My Profile</a>
-            <a href="#settings" class="sub_btn">Settings</a>
+            <a href="#saves" class="sub_btn">MY SAVES</a>
+            <a href="#profile" class="sub_btn">MY PROFILE</a>
+            <a href="#settings" class="sub_btn">SETTINGS</a>
         </div>
         
     </header>      
@@ -686,7 +791,7 @@
         <!-- <a id="prevButton" href="#form2" class='button'></a> -->
         <!-- <a id="nextButton" href="#main" onClick="return addName();" class='button'></a>         -->
         <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton headleft'></a>
-        <h1><a id="return_login" href="#login">THRIFTLY</a></h1>
+        <a id="return_login" href="#login"><img src="img/logo.png" alt=""></a>
     </header>  
 
     </div> <!-- afui ends -->
