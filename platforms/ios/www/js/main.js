@@ -2,15 +2,16 @@ $.ui.blockPageScroll()
 $.ui.useOSThemes=false;
 $.ui.backButtonText="Back";           
 
+
+
 $(".filters").click(function(){
     $.ui.toggleSideMenu(false);
 });
 
-
 function promote() {
     setTimeout(function(){
         $("#promoted").show();
-    },2000);
+    },10000);
 };
 
 var pictureSource;  
@@ -209,6 +210,31 @@ $(window).load(function() {
     filter();
     slider();
     camerapull();
+
+    // var save = 0; 
+
+    // if save == 0 {
+    //     addcolor();
+    //     save = 1;
+    // } else {
+    //     removecolor();
+    //     save = 0;
+    // }
+
+    function addColor(){
+        $(".button_save").click(function(){
+            console.log("testing");
+            $(this).addClass("saved");        
+        });
+    };
+
+    function removeColor(){
+        $(".button_save").click(function(){
+            console.log("testing2");
+            $(this).removeClass("saved");        
+        });
+    };    
+    
 });
         
 

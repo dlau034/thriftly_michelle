@@ -266,7 +266,7 @@ h3 {
 .slide_row a {
 	float: left;
 	width: 100px;
-	background-color:#FDA275!important;
+	background-color:#FDA275;
 	
 	margin: -1px;
 	overflow: hidden;
@@ -322,7 +322,7 @@ h3 {
 }
 .boxing_right .btn {
 	float: right;
-	background-color: #f68944!important;
+	background-color: #f68944;
 	display: block;
 	width: 106px;
 	text-align: center;
@@ -412,6 +412,8 @@ h3 {
 }*/
 
 /* @Buy PANEL */
+
+
 .buy_img {
 	background-color: #f9f9f9;
 	overflow: hidden;
@@ -485,6 +487,10 @@ h3 {
 }
 
 /* @FEED PAGE FILTER PANELS @main */
+
+.saved {
+	background-color: red!important;
+}
 
 #feed_search {
 	/*width: 96%!important;*/
