@@ -206,7 +206,7 @@ h3 {
 /* Feed Panel */
 
 #promoted {
-	/*display: none;	*/
+	display: none;	
 }
 #promoted .slide_row{
 	background-color: #FEE4C5;
@@ -494,7 +494,7 @@ h3 {
 /* @FEED PAGE FILTER PANELS @main */
 
 .saved {
-	background-color: red!important;
+	background-color: #F15A24!important;
 }
 
 #feed_search {
