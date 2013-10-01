@@ -202,7 +202,22 @@ function slider(){
     }
     var carousel = $(".slide_main").carousel(options);     
     console.log("slider")         
-}; 
+};
+
+
+var click_save = 0;
+
+function addColor(){
+    $(".button_save").click(function(){
+        if (click_save == 0) {
+            $(this).addClass("saved");
+            click_save = 1
+        } else {
+            $(this).removeClass("saved");
+            click_save = 0
+        }
+        });
+};
 
 // When data.json is loaded, filter and slider is index
 
@@ -210,6 +225,7 @@ $(window).load(function() {
     filter();
     slider();
     camerapull();
+
 
     // var save = 0; 
 
@@ -221,12 +237,6 @@ $(window).load(function() {
     //     save = 0;
     // }
 
-    function addColor(){
-        $(".button_save").click(function(){
-            console.log("testing");
-            $(this).addClass("saved");        
-        });
-    };
 
     function removeColor(){
         $(".button_save").click(function(){
