@@ -10,7 +10,7 @@ $(".filters").click(function(){
 function promote() {
     setTimeout(function(){
         $("#promoted").show();
-    },1000);
+    },2000);
 };
 
 var pictureSource;  
