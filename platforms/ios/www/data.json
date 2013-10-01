@@ -11,7 +11,7 @@
     "auction_start": "600",
     "image" : "21.jpg",
     "gender" : "female",
-    "tag" : "Personal Shopper, accessories",
+    "tag" : "Stylist - Jennifer Aniston",
     "minutes":"10"
     },
     {
@@ -25,7 +25,7 @@
     "auction_start": "129",
     "image" : "19.jpg",
     "gender" : "female",
-    "tag" : "designer",
+    "tag" : "glamour",
     "minutes":"15"
     },
     {
@@ -39,7 +39,7 @@
     "auction_start": "250",
     "image" : "17.jpg",
     "gender" : "female",
-    "tag" : "designer, handbag",
+    "tag" : "designer",
     "minutes":"22"
     },
     {
@@ -53,7 +53,7 @@
     "auction_start": "95",
     "image" : "22.jpg",
     "gender" : "female",
-    "tag" : "Personal Shopper, shoes",
+    "tag" : "Stylist - Jennifer Aniston",
     "minutes":"27"
     },
     {
@@ -67,7 +67,7 @@
     "auction_start": "120",
     "image" : "20.jpg",
     "gender" : "female",
-    "tag" : "Personal Shopper, accessories",
+    "tag" : "Stylist - Jennifer Aniston",
     "minutes":"30"
     },
     {
@@ -211,7 +211,7 @@
       "minutes":"359"
     },         
     {
-      "name": "Women's Black Leather Oxfords, Sporty,EXCELLENT condition",
+      "name": "Men's Black Leather Oxfords, Sporty,EXCELLENT condition",
       "brand": "Oxfords",
       "size": "Large",
       "store": "Housing Works",
@@ -221,7 +221,7 @@
       "auction_start": "25",
       "image" : "10.jpg",
       "gender" : "male",
-      "tag" : "skirt",
+      "tag" : "shoes",
       "minutes":"370"
     },         
     {

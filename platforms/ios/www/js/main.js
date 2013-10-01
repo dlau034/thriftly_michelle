@@ -142,7 +142,7 @@ function filter(){
         console.log("jen");
         // $.ui.toggleSideMenu(false)
         featureList.filter(function(item) {
-            if (item.values().category == "jen") {                
+            if (item.values().category == "Stylist - Jennifer Aniston") {                
                 return true;
             } else {
                 return false;
