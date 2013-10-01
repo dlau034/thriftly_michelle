@@ -10,6 +10,7 @@ $(".filters").click(function(){
 
 function promote() {
     setTimeout(function(){
+        console.log("promtedsfsdfs")
         $("#promoted").show();
     },5000);
 };

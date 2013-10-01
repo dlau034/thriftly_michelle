@@ -206,7 +206,7 @@ h3 {
 /* Feed Panel */
 
 #promoted {
-	display: none;	
+	/*display: none;	*/
 }
 #promoted .slide_row{
 	background-color: #FEE4C5;
