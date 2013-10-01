@@ -5,52 +5,56 @@
     "brand" : "Jennifer Meyer",
     "size": "",
     "store": "Angel Street Thrift Shop",
-    "time_left": "30m",
+    "time_left": "10m",
     "description": "Beautifully crafted gold leaf necklace as worn by Jennifer Anniston’s character Brooke Meyers in the hit movie “The Break up”",
     "buy_price": "700",
     "auction_start": "600",
     "image" : "21.jpg",
     "gender" : "female",
-    "tag" : "Personal Shopper, accessories"
+    "tag" : "Stylist - Jennifer Aniston",
+    "minutes":"10"
     },
     {
     "name": "JIMMY CHOO Python Leather Blk Gold Slingback Stilettos US 5.5 EU 35.5",
     "brand" : "Jimmy Choo",
     "size": "US 5.5",
     "store": "Angel Street Thrift Shop",
-    "time_left": "30m",
+    "time_left": "15m",
     "description": "These black and gold authentic Jimmy Choo size 5 1/2 shoes are in near perfect condition barely worn.",
     "buy_price": "169",
     "auction_start": "129",
     "image" : "19.jpg",
     "gender" : "female",
-    "tag" : "designer"
+    "tag" : "glamour",
+    "minutes":"15"
     },
     {
     "name": "Diane Von Furstenberg Lytton Clutch Bag",
     "brand" : "Diane Von Furstenberg",
     "size": "",
     "store": "Spence-Chapin Thrift Shop",
-    "time_left": "30m",
+    "time_left": "22m",
     "description": "Wrap up your style with this sleek cream lace clutch from Diane Von Furstenberg",
     "buy_price": "300",
     "auction_start": "250",
     "image" : "17.jpg",
     "gender" : "female",
-    "tag" : "designer, handbag"
+    "tag" : "designer",
+    "minutes":"22"
     },
     {
     "name": "Stuart Weitzman Black Brown Leather Knee High ",
     "brand" : "Stuart Weitzman",
     "size": "10",
     "store": "Angel Street Thrift Shop",
-    "time_left": "30m",
+    "time_left": "27m",
     "description": "'I love comfy boots, especially by Staurt Weitzman' -Jennifer Anniston",
     "buy_price": "100",
     "auction_start": "95",
     "image" : "22.jpg",
     "gender" : "female",
-    "tag" : "Personal Shopper, shoes"
+    "tag" : "Stylist - Jennifer Aniston",
+    "minutes":"27"
     },
     {
     "name": "Tom Ford Sienna Oversized Sunglasses Brown",
@@ -63,7 +67,8 @@
     "auction_start": "120",
     "image" : "20.jpg",
     "gender" : "female",
-    "tag" : "Personal Shopper, accessories"
+    "tag" : "Stylist - Jennifer Aniston",
+    "minutes":"30"
     },
     {
     "name": "Valentino Side Ruffle Stretch Wool Dress",
@@ -76,20 +81,22 @@
     "auction_start": "1000",
     "image" : "18.jpg",
     "gender" : "female",
-    "tag" : "designer, dress"
+    "tag" : "designer, dress",
+    "minutes":"30"
     },
     {
       "name": "Victoria's Secret Blue Dress Size Medium",
       "brand" : "Victoria's Secret",
       "size": "Medium",
       "store": "Beacon’s Closet",
-      "time_left": "30m",
+      "time_left": "35m",
       "description": "Worn, but in great condition, soft fabric with a relaxed, comfortable silhouette, No wear or tear. Great summer dress for a nice day out",
       "buy_price": "30",
       "auction_start": "12",
       "image" : "1.jpg",
       "gender" : "female",
-      "tag" : "dress"
+      "tag" : "dress",
+      "minutes":"35"
     },
     {
       "name": "Beautiful Pleated Dress Sheath, Size 12, White",
@@ -102,7 +109,8 @@
       "auction_start": "28",
       "image" : "2.jpg",
       "gender" : "male",
-      "tag" : "dress"
+      "tag" : "dress",
+      "minutes":"42"
     },         
     {
       "name": "Men's Jacket Blue - Levis",
@@ -115,7 +123,8 @@
       "auction_start": "19",
       "image" : "3.jpg",
       "gender" : "male",
-      "tag" : "jacket"
+      "tag" : "jacket",
+      "minutes":"57"
     },         
     {
       "name": "Pink Calf Hair Pony Hair Pumps",
@@ -128,7 +137,8 @@
       "auction_start": "14",
       "image" : "4.jpg",
       "gender" : "female",
-      "tag" : "shoes"
+      "tag" : "shoes",
+      "minutes":"59"
     },            
     {
       "name": "Vicky Tiel Sleeveless Jersey Dress Black",
@@ -141,7 +151,8 @@
       "auction_start": "12",
       "image" : "5.jpg",
       "gender" : "female",
-      "tag" : "dress"
+      "tag" : "dress",
+      "minutes":"73"
     },    
     {
       "name": "Liz Claiborne Mary Jane pumps High Heels Red Size 10",
@@ -154,7 +165,8 @@
       "auction_start": "15",
       "image" : "6.jpg",
       "gender" : "female",
-      "tag" : "shoes"
+      "tag" : "shoes",
+      "minutes":"200"
     },                    
     {
       "name": "High-Low Skirt XS/S (Lot Of 2)",
@@ -167,7 +179,8 @@
       "auction_start": "12",
       "image" : "7.jpg",
       "gender" : "female",
-      "tag" : "skirt"
+      "tag" : "skirt",
+      "minutes":"252"
     },
     {
       "name": "Womens Leather Jacket By New York & Company",
@@ -180,7 +193,8 @@
       "auction_start": "12",
       "image" : "8.jpg",
       "gender" : "female",
-      "tag" : "jacket"
+      "tag" : "jacket",
+      "minutes":"334"
     },
     {
       "name": "Brighton Necklace/Charm",
@@ -193,10 +207,11 @@
       "auction_start": "17",
       "image" : "9.jpg",
       "gender" : "male",
-      "tag" : "accessories"
+      "tag" : "accessories",
+      "minutes":"359"
     },         
     {
-      "name": "Women's Black Leather Oxfords, Sporty,EXCELLENT condition",
+      "name": "Men's Black Leather Oxfords, Sporty,EXCELLENT condition",
       "brand": "Oxfords",
       "size": "Large",
       "store": "Housing Works",
@@ -206,7 +221,8 @@
       "auction_start": "25",
       "image" : "10.jpg",
       "gender" : "male",
-      "tag" : "skirt"
+      "tag" : "shoes",
+      "minutes":"370"
     },         
     {
       "name": "Cobalt Blue Ruffle Waist Tank Dress Orig",
@@ -219,7 +235,8 @@
       "auction_start": "25",
       "image" : "11.jpg",
       "gender" : "female",
-      "tag" : "dress"
+      "tag" : "dress",
+      "minutes":"720"
     },            
     {
       "name": "Women's Empire Waist Sundress Beach Dress",
@@ -232,7 +249,8 @@
       "auction_start": "21",
       "image" : "12.jpg",
       "gender" : "male",
-      "tag" : "dress"
+      "tag" : "dress",
+      "minutes":"780"
     },  
     {
       "name": "Women sneaker-style flats Vikoria",
@@ -245,7 +263,8 @@
       "auction_start": "10",
       "image" : "13.jpg",
       "gender" : "female",
-      "tag" : "shoes"
+      "tag" : "shoes",
+      "minutes":"900"
     },                   
     {
       "name": "Stella & Jamie Pleated Skirt Pala Tie Dress Pink Patterns",
@@ -258,7 +277,8 @@
       "auction_start": "18",
       "image" : "14.jpg",
       "gender" : "female",
-      "tag" : "dress"
+      "tag" : "dress",
+      "minutes":"1020"
     }    
   ]
 }

@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- css  -->
 
     <link rel="stylesheet" type="text/css" href="css/icons.css" /> 
@@ -139,8 +139,10 @@
             <ul class="list">
                 <li class="divider">Sort By</li>
                 <li class="filters btn" id="filter-none">Show all</li>
+                <li class="sort filters" data-sort="price">Price: Lowest - Highest</li>
+                <li class="sort filters" data-sort="endingsoonest">Time: Ending Soonest</li>
                 <li class="sort filters" data-sort="price">Price Ranking</li>
-                <li class="sort filters" data-sort="brand">Closing Time</li>                
+                <li class="sort filters" data-sort="brand">Closing Time</li>
                 <li class="sort filters" data-sort="brand">Brand Names</li>
                 
                 <li class="divider">Show Only</li>                
@@ -325,11 +327,13 @@
                                             <img src="{{image}}" alt="">
                                         </a>                            
                                         <div class="boxing">
-                                            <h3 class="name">{{name}}</h3>                               
+                                            <h3 class="name">{{name}}</h3>
                                             <p class="size">Size: {{size}}</p>
                                             <p class="brand">Brand: {{brand}}</p>
                                             <p>Category: <span class="category">{{tag}}</span></p>
-                                            <p>Store: {{store}}<p>    
+                                            <p>Store: {{store}}<p>
+                                           <span class="endingsoonest"><b>{{minutes}}</b></span>
+
                                             <span class="time"><b>{{time_left}}</b> Remain</span>
 
                                             
@@ -481,18 +485,18 @@
                                 <div class="slide_main">
                                    <div class="slide_row">
                                         <a class="photo_box" href="#photo">
-                                            <img src="1.jpg" alt="">
+                                            <img src="3.jpg" alt="">
                                         </a>                            
                                         <div class="boxing">
-                                            <h3 class="name">Clothes</h3>                               
-                                            <p class="size">Size: 12</p>
-                                            <p class="brand">Brand: brand</p>
-                                            <p>Category: <span class="category">category</span></p>
-                                            <p>Store: Cool store<p>    
-                                            <span class="time"><b>12</b> Remain</span>
+                                            <h3 class="name">Men's Jacket Blue - Levis</h3>                               
+                                            <p class="size">Size: Small</p>
+                                            <p class="brand">Brand: Levis</p>
+                                            <p>Category: <span class="category">jacket</span></p>
+                                            <p>Store: Housing Works<p>
+                                            <span class="time"><b>57m</b> Remain</span>
 
                                             
-                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">12</span></b>&nbspBid&nbsp;<b>$13</b></span><span>
+                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">25</span></b>&nbspBid&nbsp;<b>$19</b></span><span>
 
                                             <div class="pull_bar"></div>
                                             <div class="pull_bar"></div>                                                 
@@ -503,8 +507,8 @@
                                             <div class="pull_bar_right"></div>
                                             <div class="pull_bar_right"></div>                                        
                                             <p>DESCRIPTION: <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ratione.</p>
-                                            <a href="#buy" class="btn button_buy">BUY $12</a>
-                                            <a href="#bid" class="btn button_buy">BID $12</a>                                            
+                                            <a href="#buy" class="btn button_buy">BUY $25</a>
+                                            <a href="#bid" class="btn button_buy">BID $19</a>
                                         </div>
                                     </div>            
                                 </div>
@@ -514,18 +518,18 @@
                                 <div class="slide_main">
                                    <div class="slide_row">
                                         <a class="photo_box" href="#photo">
-                                            <img src="1.jpg" alt="">
+                                            <img src="7.jpg" alt="">
                                         </a>                            
                                         <div class="boxing">
-                                            <h3 class="name">Name</h3>                               
-                                            <p class="size">Size: 12</p>
+                                            <h3 class="name">High-Low Skirt XS/S (Lot Of 2)</h3>                               
+                                            <p class="size">Size: Small</p>
                                             <p class="brand">Brand: brand</p>
-                                            <p>Category: <span class="category">category</span></p>
-                                            <p>Store: Cool store<p>    
-                                            <span class="time"><b>12</b> Remain</span>
+                                            <p>Category: <span class="category">skirt</span></p>
+                                            <p>Store: Housing Works<p>
+                                            <span class="time"><b>4h 12m</b> Remain</span>
 
                                             
-                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">12</span></b>&nbspBid&nbsp;<b>$13</b></span><span>
+                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">30</span></b>&nbspBid&nbsp;<b>$12</b></span><span>
 
                                             <div class="pull_bar"></div>
                                             <div class="pull_bar"></div>                                                 
@@ -536,37 +540,109 @@
                                             <div class="pull_bar_right"></div>
                                             <div class="pull_bar_right"></div>                                        
                                             <p>DESCRIPTION: <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ratione.</p>
-                                            <a href="#buy" class="btn button_buy">BUY $12</a>
+                                            <a href="#buy" class="btn button_buy">BUY $30</a>
                                             <a href="#bid" class="btn button_buy">BID $12</a>                                            
                                         </div>
                                     </div>            
-                                </div>                                            
+                                </div>
+                    
+                        
+                        <div class="slide_main">
+                            <div class="slide_row">
+                                <a class="photo_box" href="#photo">
+                                    <img src="10.jpg" alt="">
+                                        </a>
+                                <div class="boxing">
+                                    <h3 class="name">Men's' Black Leather Oxfords, Sporty,EXCELLENT condition</h3>
+                                    <p class="size">Size: Large</p>
+                                    <p class="brand">Brand: Oxfords</p>
+                                    <p>Category: <span class="category">shoes</span></p>
+                                    <p>Store: Housing Works<p>
+                                    <span class="time"><b>6h 10m</b> Remain</span>
+                                    
+                                    
+                                    <span class="pricing">Buy&nbsp;<b>$<span class="price">38</span></b>&nbspBid&nbsp;<b>$25</b></span><span>
+                                        
+                                        <div class="pull_bar"></div>
+                                        <div class="pull_bar"></div>
+                                        </div>
+                            </div>
+                            <div class="slide_row">
+                                <div class="boxing_right">
+                                    <div class="pull_bar_right"></div>
+                                    <div class="pull_bar_right"></div>
+                                    <p>DESCRIPTION: <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ratione.</p>
+                                    <a href="#buy" class="btn button_buy">BUY $38</a>
+                                    <a href="#bid" class="btn button_buy">BID $25</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    
+                    
+                    
+                        
+                        <div class="slide_main">
+                            <div class="slide_row">
+                                <a class="photo_box" href="#photo">
+                                    <img src="13.jpg" alt="">
+                                        </a>
+                                <div class="boxing">
+                                    <h3 class="name">Women sneaker-style flats Vikoria</h3>
+                                    <p class="size">Size: 8.5</p>
+                                    <p class="brand">Brand: Vikoria</p>
+                                    <p>Category: <span class="category">shoes</span></p>
+                                    <p>Store: Housing Works<p>
+                                    <span class="time"><b>15h</b> Remain</span>
+                                    
+                                    
+                                    <span class="pricing">Buy&nbsp;<b>$<span class="price">13</span></b>&nbspBid&nbsp;<b>$10</b></span><span>
+                                        
+                                        <div class="pull_bar"></div>
+                                        <div class="pull_bar"></div>
+                                        </div>
+                            </div>
+                            <div class="slide_row">
+                                <div class="boxing_right">
+                                    <div class="pull_bar_right"></div>
+                                    <div class="pull_bar_right"></div>
+                                    <p>DESCRIPTION: <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ratione.</p>
+                                    <a href="#buy" class="btn button_buy">BUY $13</a>
+                                    <a href="#bid" class="btn button_buy">BID $10</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    
+                    
         <!-- Item Group  -->
 
                 </div> <!-- list ends -->
             </div>
 
     <!-- Panel - @MyStuff @save-->
-    <!-- ############################################################### -->            
+    <!-- ############################################################### -->
 
-        <div title="MY STUFF" id="saves" data-tab="navbar_profile" data-header="mystuff_head" class="panel my_stuff" >            
+        <div title="MY STUFF" id="saves" data-tab="navbar_profile" data-header="mystuff_head" class="panel my_stuff" >
                 <div class="list bookmark_list  " id="container">
                                 
                                 <div class="slide_main">
                                    <div class="slide_row">
                                         <a class="photo_box" href="#photo">
-                                            <img src="1.jpg" alt="">
+                                            <img src="17.jpg" alt="">
                                         </a>                            
                                         <div class="boxing">
-                                            <h3 class="name">Clothes</h3>                               
-                                            <p class="size">Size: 12</p>
-                                            <p class="brand">Brand: brand</p>
-                                            <p>Category: <span class="category">category</span></p>
-                                            <p>Store: Cool store<p>    
-                                            <span class="time"><b>12</b> Remain</span>
+                                            <h3 class="name">Diane Von Furstenberg Lytton Clutch Bag</h3>                               
+                                            <p class="size">Size:</p>
+                                            <p class="brand">Brand: Diane Von Furstenberg</p>
+                                            <p>Category: <span class="category">designer, handbag</span></p>
+                                            <p>Store: Spence-Chapin Thrift Shop<p>    
+                                            <span class="time"><b>22</b> Remain</span>
 
                                             
-                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">12</span></b>&nbspBid&nbsp;<b>$13</b></span><span>
+                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">300</span></b>&nbspBid&nbsp;<b>$250</b></span><span>
 
                                             <div class="pull_bar"></div>
                                             <div class="pull_bar"></div>                                                 
@@ -576,9 +652,9 @@
                                         <div class="boxing_right">
                                             <div class="pull_bar_right"></div>
                                             <div class="pull_bar_right"></div>                                        
-                                            <p>DESCRIPTION: <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ratione.</p>
-                                            <a href="#buy" class="btn button_buy">BUY $12</a>
-                                            <a href="#bid" class="btn button_buy">BID $12</a>                                            
+                                            <p>DESCRIPTION: <br>Wrap up your style with this sleek cream lace clutch from Diane Von Furstenberg.</p>
+                                            <a href="#buy" class="btn button_buy">BUY $300</a>
+                                            <a href="#bid" class="btn button_buy">BID $250</a>
                                         </div>
                                     </div>            
                                 </div>
@@ -588,18 +664,18 @@
                                 <div class="slide_main">
                                    <div class="slide_row">
                                         <a class="photo_box" href="#photo">
-                                            <img src="1.jpg" alt="">
+                                            <img src="11.jpg" alt="">
                                         </a>                            
                                         <div class="boxing">
-                                            <h3 class="name">Name</h3>                               
-                                            <p class="size">Size: 12</p>
-                                            <p class="brand">Brand: brand</p>
-                                            <p>Category: <span class="category">category</span></p>
-                                            <p>Store: Cool store<p>    
-                                            <span class="time"><b>12</b> Remain</span>
+                                            <h3 class="name">Cobalt Blue Ruffle Waist Tank Dress Orig</h3>
+                                            <p class="size">Size: Medium</p>
+                                            <p class="brand">Brand: Cobalt</p>
+                                            <p>Category: <span class="category">dress</span></p>
+                                            <p>Store: Vintage Thrift<p>
+                                            <span class="time"><b>12h</b> Remain</span>
 
                                             
-                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">12</span></b>&nbspBid&nbsp;<b>$13</b></span><span>
+                                            <span class="pricing">Buy&nbsp;<b>$<span class="price">30</span></b>&nbspBid&nbsp;<b>$25</b></span><span>
 
                                             <div class="pull_bar"></div>
                                             <div class="pull_bar"></div>                                                 
@@ -610,18 +686,55 @@
                                             <div class="pull_bar_right"></div>
                                             <div class="pull_bar_right"></div>                                        
                                             <p>DESCRIPTION: <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ratione.</p>
-                                            <a href="#buy" class="btn button_buy">BUY $12</a>
-                                            <a href="#bid" class="btn button_buy">BID $12</a>                                            
+                                            <a href="#buy" class="btn button_buy">BUY $30</a>
+                                            <a href="#bid" class="btn button_buy">BID $25</a>
                                         </div>
                                     </div>            
-                                </div>                                            
+                                </div>
+                    
+                    
+                    
+                    <div class="slide_main">
+                        <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                                <img src="1.jpg" alt="">
+                                    </a>
+                            <div class="boxing">
+                                <h3 class="name">JIMMY CHOO Python Leather Blk Gold Slingback Stilettos US 5.5 EU 35.5</h3>
+                                <p class="size">Size: US 5.5</p>
+                                <p class="brand">Brand: Jimmy Choo</p>
+                                <p>Category: <span class="category">designer</span></p>
+                                <p>Store: Angel Street Thrift Shop<p>
+                                <span class="time"><b>15m</b> Remain</span>
+                                
+                                
+                                <span class="pricing">Buy&nbsp;<b>$<span class="price">169</span></b>&nbspBid&nbsp;<b>$129</b></span><span>
+                                    
+                                    <div class="pull_bar"></div>
+                                    <div class="pull_bar"></div>
+                                    </div>
+                        </div>
+                        <div class="slide_row">
+                            <div class="boxing_right">
+                                <div class="pull_bar_right"></div>
+                                <div class="pull_bar_right"></div>
+                                <p>DESCRIPTION: <br>These black and gold authentic Jimmy Choo size 5 1/2 shoes are in near perfect condition barely worn.</p>
+                                <a href="#buy" class="btn button_buy">BUY $169</a>
+                                <a href="#bid" class="btn button_buy">BID $129</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+            
                 <!-- Item Group  -->
 
                 </div> <!-- list ends -->
-        </div>    
+        </div>
 
     <!-- Panel - @MyStuff @profile-->
-    <!-- ############################################################### -->            
+    <!-- ############################################################### -->
 
         <div title="My Stuff" id="profile" data-tab="navbar_profile" data-header="mystuff_head"  class="panel my_stuff" >
             <div class="stuff_content">
@@ -632,15 +745,15 @@
                 
                 <div class="form_small">
                     <span class="label">Name</span>
-                    <input class="orange_input" type="text" value="David">
-                    <input class="orange_input" type="text" value="Lau">
+                    <input class="orange_input" type="text" value="Michelle">
+                    <input class="orange_input" type="text" value="Austria">
                 </div>                
                 <span class="label pushdown">Phone</span>
                 <input class="orange_input" type="text" value="415-323-8832">
                 <span class="label">Email</span>
-                <input class="orange_input" type="text" value="david@davidlaucreative.com">
+                <input class="orange_input" type="text" value="michelle@thriftly.com">
                 <span class="label">About Me</span>
-                <textarea rows="4" class="orange_input" type="text">From Brooklyn, & love thrift shopping. </textarea>
+                <textarea rows="4" class="orange_input" type="text">From Brooklyn, &amp; love thrift shopping. </textarea>
                 <span class="label">Gender</span>
                 <select class="orange_input">
                     <option value="">Male</option>
