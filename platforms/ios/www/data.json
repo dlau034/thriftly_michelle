@@ -279,6 +279,61 @@
       "gender" : "female",
       "tag" : "dress",
       "minutes":"1020"
-    }    
+    },
+    {
+    "name": "Catherine Malandrino Black Sheered Sleeve Dress",
+    "brand": "Catherine Malandrino",
+    "size": "0",
+    "store": "Soho Thrift Shop",
+    "time_left": "18h",
+    "description": " Gently used (Item has obviously been used and shows slight signs of wear",
+    "buy_price": "30",
+    "auction_start": "18",
+    "image" : "23.jpg",
+    "gender" : "female",
+    "tag" : "glamour",
+    "minutes":"1080"
+    },
+    {
+    "name": "Prada Scarf Wrap Shawl Fairy Tales Skilk Brown",
+    "brand": "Prada",
+    "size": "",
+    "store": "Arthritis Thrift Shop",
+    "time_left": "19h",
+    "description": "New without tags: A brand-new, unused, and unworn item (including handmade items) that is not in original packaging or may be missing original packaging materials (such as the original box or bag).",
+    "buy_price": "69",
+    "auction_start": "55",
+    "image" : "24.jpg",
+    "gender" : "female",
+    "tag" : "glamour",
+    "minutes":"1140"
+    },
+    {
+    "name": "Marc By Marc Jacobs Jumble Genuine Leather Hobo Tote Bag",
+    "brand": "Marc By Marc Jacobs",
+    "size": "",
+    "store": "Vintage Thrift",
+    "time_left": "21h",
+    "description": "Authentic Marc By Marc Jacobs Jumble Genuine Leather Hobo Tote Bag Handang",
+    "auction_start": "150",
+    "image" : "25.jpg",
+    "gender" : "female",
+    "tag" : "glamour",
+    "minutes":"1260"
+    },
+    {
+    "name": "Alexander Wang EMILE Wool Tote Handbag Charcoal Gray/Black",
+    "brand": "Alexander Wang",
+    "size": "",
+    "store": "Vintage Thrift",
+    "time_left": "22h",
+    "description": "New, matches everything, not as heavy as the leather version, this one has a neat leather black lizard embossed trim, body is wool. ",
+    "auction_start": "450",
+    "image" : "26.jpg",
+    "gender" : "female",
+    "tag" : "glamour",
+    "minutes":"1320"
+    }
+
   ]
 }
