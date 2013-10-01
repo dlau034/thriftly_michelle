@@ -11,7 +11,7 @@ $(".filters").click(function(){
 function promote() {
     setTimeout(function(){
         $("#promoted").show();
-    },10000);
+    },5000);
 };
 
 var pictureSource;  
